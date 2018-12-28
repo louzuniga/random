@@ -1,5 +1,5 @@
 RANDOM! 
 
-Are you bored or simply browsing around and looking for something to do? Let RANDOM provide you some random ideas and show you some options. 
+Are you bored or simply browsing around and looking for something to do? Let RANDOM give you some random activity, advice and/or name. 
 
-Click the the RANDOM button and it will retrieve a random idea.
+Click the RANDOM button and it will retrieve something random of your choice.
