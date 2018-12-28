@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Find RANDOM activites</title>
+</head>
+<body>
+    <div class="container">
+        <h1>RANDOM!</h1>
+        <form id="js-form">
+            <p class="statement">Are you bored, can't decide on an activity, or simply browsing around?</p>
+            <p class="statement">Get RANDOM feedback!</p>
+            <!--Random Advice -->
+            <input type="button" class="button random-advice" value="Click me for RANDOM Advice">
+            <br>
+            <!--Random Activity -->
+            <input type="button" class="button random-activity" value="Click me for RANDOM Activities">
+            <br>
+            <!--Random Names-->
+            <input type="button" class="button random-name" value="Click me for RANDOM Names">
+        </form>
+
+        <p id="js-error-message" class="js-error-message"></p>
+        <section id="results" class="hidden">
+            <p id="results-list"></p>
+        </section>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
