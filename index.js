@@ -21,7 +21,7 @@ function getRandomAdvice() {
 function getRandomName() {
     fetch('https://uinames.com/api/')
     .then(name => name.json())
-    .then(nameJson => displayRandomName(nameJson.name))
+    .then(nameJson => displayRandomName(nameJson))
     .catch(err => {
         $('#js-error-message').text(`Uh oh, Not cool: ${err.message}`);
     });
@@ -38,13 +38,13 @@ function displayRandomActivity(activityJson) {
      emptyAndRemove();
      $('#results-list').append(
          $(`<p>Here's advice:<br><b>${adviceJson.slip.advice}</b></p>`)
-    );console.log(adviceJson.slip.advice);
+    );
  }
 
  function displayRandomName(nameJson) {
      emptyAndRemove();
      $('#results-list').append(
-         $(`<p>What do you think of this name:<br><b>${nameJson}</b></p>`)
+         $(`<p>What do you think of this ${nameJson.region} name:<br><b>${nameJson.name}</b></p>`)
      );console.log(nameJson);
  }
 
@@ -54,10 +54,16 @@ function displayRandomActivity(activityJson) {
     $('#js-form').addClass('hidden');
  }
 
+ function copyright() {
+    let d = new Date()
+    $('#copyright').text(`Copyright \u00A9 ${d.getFullYear()} Lou Zuniga https://github.com/louzuniga`)
+}
+
 function watchForm () {
   $('form').submit(event => {
     event.preventDefault();
   });
+  copyright();
     $('form').on('click', '.random-activity',
         function () { 
          return getRandomActivity();
