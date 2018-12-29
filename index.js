@@ -30,21 +30,21 @@ function getRandomName() {
 function displayRandomActivity(activityJson) {
     emptyAndRemove();
      $('#results-list').append(
-        $(`<p>Ponder about this random activity:<br><b>${activityJson.activity}</b></p>`)
+        $(`<p>Ponder about this activity:<br><strong>${activityJson.activity}</strong></p>`)
     );
  }
 
  function displayRandomAdvice(adviceJson) {
      emptyAndRemove();
      $('#results-list').append(
-         $(`<p>Here's advice:<br><b>${adviceJson.slip.advice}</b></p>`)
+         $(`<p>Here's advice:<br><strong>${adviceJson.slip.advice}</strong></p>`)
     );
  }
 
  function displayRandomName(nameJson) {
      emptyAndRemove();
      $('#results-list').append(
-         $(`<p>What do you think of this ${nameJson.region} name:<br><b>${nameJson.name}</b></p>`)
+         $(`<p>What do you think of this ${nameJson.region} name:<br><strong>${nameJson.name}</strong></p>`)
      );console.log(nameJson);
  }
 
@@ -77,6 +77,7 @@ function watchForm () {
             return getRandomName();
         });
     $('.previous').on('click',() => {
+        location.reload();
         $('#results').addClass('hidden');
         $('#js-form').removeClass('hidden');
     });
