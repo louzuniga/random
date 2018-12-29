@@ -51,6 +51,7 @@ function displayRandomActivity(activityJson) {
  function emptyAndRemove() {
     $('#results-list').empty();
     $('#results').removeClass('hidden');
+    $('#js-form').addClass('hidden');
  }
 
 function watchForm () {
@@ -69,6 +70,10 @@ function watchForm () {
         function() {
             return getRandomName();
         });
+    $('.previous').on('click',() => {
+        $('#results').addClass('hidden');
+        $('#js-form').removeClass('hidden');
+    });
 }
 
 $(watchForm);

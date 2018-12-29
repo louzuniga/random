@@ -22,13 +22,14 @@ h1 {
     max-width: 600px;
     margin: 0 auto;
     padding: 100px;
-    justify-content: space-evenly;
+    
 }
 
 .button {
     margin: 20px;
     width: 250px;
     height: 150px;
+    padding: 30px;
 }
 
 
@@ -36,3 +37,4 @@ h1 {
 .hidden {
     display: none;
 }
+
