@@ -14,7 +14,7 @@ html {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 40px;
     margin: auto 0;
     background: -webkit-linear-gradient(rgb(131, 39, 39), rgba(203, 16, 16, 0.829));
      -webkit-background-clip: text;
@@ -36,7 +36,7 @@ h1 {
 
 .button {
     margin: 10px;
-    width: 250px;
+    width: 270px;
     padding: 15px;
     font-size: 15px;
     -webkit-transition-duration: 0.4s; 
