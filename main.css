@@ -7,7 +7,7 @@ html {
   }
 
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Indie Flower', cursive;
     color: brown;
     box-sizing: border-box;
     text-align: center;
@@ -19,7 +19,7 @@ h1 {
     background: -webkit-linear-gradient(rgb(131, 39, 39), rgba(203, 16, 16, 0.829));
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
-     padding: 30px 0px 15px;
+     padding: 20px 0px 0px;
 }
 
 .statement {
@@ -94,7 +94,6 @@ h1 {
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 100px;
-         padding: 30px 0px 10px;
     }
 
     .button {
