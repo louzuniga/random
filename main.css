@@ -1,10 +1,11 @@
 html { 
-    background: url(https://picsum.photos/200/300/?random) no-repeat center center fixed; 
+    background: url(https://picsum.photos/800/900/?random) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
+
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: brown;
@@ -15,15 +16,15 @@ html {
 h1 {
     font-size: 60px;
     margin: auto 0;
-    background: -webkit-linear-gradient(#eee, rgb(150, 19, 19));
+    background: -webkit-linear-gradient(rgb(131, 39, 39), rgba(203, 16, 16, 0.829));
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
-     padding: 70px 0px 20px;
+     padding: 30px 0px 15px;
 }
 
 .statement {
-    background-color: rgba(255,255,255, 1);
-    font-size: 20px;
+    background-color: rgba(212, 204, 204, 0.7);
+    font-size: 15px;
     padding: 7px;
     border-radius: 5px;
 }
@@ -38,16 +39,38 @@ h1 {
     width: 250px;
     padding: 15px;
     font-size: 15px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
     font-weight: bold;
-    color: midnightblue;
+    color: rgba(143, 31, 31, 0.934);
     border-radius: 5px;
+    background: linear-gradient(rgb(223, 219, 220),rgb(190, 177, 177));
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: none;
+    cursor: pointer;
 }
 
+.button:hover {
+    background: linear-gradient(rgb(145, 19, 46),rgb(189, 28, 28));
+    background-color: rgb(165, 40, 61); 
+    color: rgb(202, 194, 194);
+  }
+
 #results-list {
-    background-color: rgba(255,255,255, 1);
+    background-color: rgba(255,255,255, .7);
     font-size: 25px;
     padding: 15px;
     border-radius: 5px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    margin-bottom: 1rem;
+    vertical-align: middle;
+    border: 0;
+    background-color: none;
 }
 
 #copyright {
@@ -60,7 +83,7 @@ h1 {
     width: 100%;
     text-align: center;
     color: black;
-    background: #eee;
+    background-color: rgba(255,255,255, .5);
 }
 
 .hidden {
@@ -71,36 +94,17 @@ h1 {
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 100px;
-         padding: 200px 0px 40px;
+         padding: 30px 0px 10px;
     }
 
     .button {
-        width: 450px;
-        padding: 25px;
-        font-size: 28px;
-    }
-}
-
-@media only screen and (min-width: 1024px) {
-    h1 {
-        font-size: 140px;
-         padding: 100px 0px 20px;
-    }
-
-    .button {
-        width: 600px;
-        font-size: 38px;
-    }
-
-    #results-list {
-        font-size: 45px;
+        width: 470px;
+        padding: 10px;
+        font-size: 25px;
     }
 
     .statement {
-        font-size: 40px;
-    }
-
-    #copyright {
-        font-size: 18px;
+        font-size: 25px;
     }
 }
+
