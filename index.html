@@ -3,17 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">-->
     <link rel="stylesheet" href="main.css">
     <title>Do something RANDOM</title>
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>RANDOM!</h1>
     </header>
     <div class="container">
         <form id="js-form">
-            <p class="statement">Are you bored, can't decide on an activity, or simply browsing around? <br>Get RANDOM feedback!</p>
+            <div class="statement">Are you bored, can't decide on an activity, or simply browsing around? <br>Get RANDOM feedback!</div>
             <input type="button" class="button random-advice" value="Click for RANDOM Advice">
             <br>
             <input type="button" class="button random-activity" value="Click for RANDOM Activities">
@@ -26,10 +27,13 @@
         </form>
 
         <p id="js-error-message" class="js-error-message"></p>
-        <section id="results" class="hidden">
-            <div id="results-list"></div>
-            <input type="button" class="button previous" value="Previous">
-            <input type="button" class="button next" value="Next">
+        <section>
+            <div id="results-list" class="hidden"></div>
+            <input id="next-advice" class="button hidden" type="button" value="Next Advice">
+            <input id="next-activity" class="button hidden" type="button" value="Next Activity">
+            <input id="next-cat" class="button hidden" type="button" value="Next Cat Pic">
+            <input id="next-dog" class="button hidden" type="button" value="Next Dog Pic">
+            <input id="previous" type="button" class="button hidden" value="Main Menu">
         </section>
     </div>
     <footer role="contentinfo" id="copyright"></footer>

@@ -65,19 +65,19 @@ function getRandomAdvice() {
 // }
 
 function displayRandomActivity(activityJson) {
+    $('#next-activity').removeClass('hidden');
     emptyAndRemove();
      $('#results-list').append(
         $(`<p>Ponder about this activity:<br><strong>${activityJson.activity}</strong></p>`)
-    );
-    $('.next').mouseup(function() {
-        $('.random-activity').click();
-    });
+    );console.log('activity clicks')
  }
 
  function displayRandomAdvice(adviceJson) {
+    $('#next-advice').removeClass('hidden');
      emptyAndRemove();
-     $('.next').mouseup(function() {
-        $('.random-advice').click();
+     $('.next').click(function() {
+        $('.random-advice').off();
+        getRandomAdvice();
     });
      $('#results-list').append(
          $(`<p>Here's advice:<br><strong>${adviceJson.slip.advice}</strong></p>`)
@@ -92,19 +92,21 @@ function displayRandomActivity(activityJson) {
 //  }
 
  function displayRandomDog(dogJson) {
+    $('#next-dog').removeClass('hidden');
     emptyAndRemove();
     $('#results-list').append(
         $(`<img class="image" src="${dogJson.message}" alt="random dog image">`)
     );
     $('.next').click(function() {
-        $('.random-dog').click();
+       getRandomDog();
     });
  }
 
  function displayRandomCat(catJson) {
+    $('#next-cat').removeClass('hidden');
     emptyAndRemove();
     $('#results-list').append(
-        $(`<img class="image" src="${catJson[0].url}" alt="random dog image">`)
+        $(`<img class="image" src="${catJson[0].url}" alt="random cat image">`)
     );
     $('.next').click(function() {
         $('.random-cat').click();
@@ -113,8 +115,9 @@ function displayRandomActivity(activityJson) {
 
  function emptyAndRemove() {
     $('#results-list').empty();
-    $('#results').removeClass('hidden');
+    $('#results-list').removeClass('hidden');
     $('#js-form').addClass('hidden');
+    $('#previous').removeClass('hidden');
  }
 
  function copyright() {
@@ -123,7 +126,18 @@ function displayRandomActivity(activityJson) {
 }
 
 function nextButtom () { 
-
+    $('#next-activity').click(function() {
+        getRandomActivity();
+    });
+    $('#next-advice').click(function() {
+        getRandomAdvice();
+    });
+    $('#next-dog').click(function() {
+        getRandomDog();
+    });
+    $('#next-cat').click(function() {
+        getRandomCat();
+    });
 }
 
 function watchForm () {
@@ -141,21 +155,19 @@ function watchForm () {
         function () { 
          return getRandomActivity();
         });
-    $('form').on('click', '.random-advice',
-        function() {
-            return getRandomAdvice();
-        });
+    $('.random-advice').click(function() {
+        return getRandomAdvice();
+    });
     // $('form').on( 'click', '.random-name', 
     //     function() {
     //         return getRandomName();
     //     });
-   
-    $('.previous').on('click',() => {
+    $('#previous').on('click',() => {
         location.reload();
         $('#results').addClass('hidden');
         $('#js-form').removeClass('hidden');
     });
-    
+    nextButtom();
 }
 
 $(watchForm);
