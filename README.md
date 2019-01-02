@@ -10,7 +10,7 @@ The app is very simple to use, the main menu has four different options to choos
 
 ## Screenshots
 
-
+<img width="768" alt="random main menu" src="https://user-images.githubusercontent.com/43398948/50582225-a19c7c00-0e15-11e9-9922-31b1d06ad823.png">
 
 ## Built With
 
