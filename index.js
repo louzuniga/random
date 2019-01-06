@@ -1,7 +1,7 @@
 'use strict';
 
 const apiKeyCat = '9807a3e1-36d8-4699-90f7-bc2b5e9fb0a4';
-const urlCat = 'https://api.thecatapi.com/v1/images/search';
+const urlCat = 'https://cors-anywhere.herokuapp.com/https://api.thecatapi.com/v1/images/search';
 
 function getRandomCat () {
    const options = {
