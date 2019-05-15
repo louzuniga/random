@@ -1,42 +1,92 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Do something RANDOM</title>
-    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Merienda"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="inner-loader"></div>
+    </div>
     <header role="banner">
-        <h1>RANDOM!</h1>
+      <h1>RANDOM!</h1>
     </header>
     <div class="container">
-        <form id="js-form">
-            <fieldset name="random-categories">
-                <h2 class="statement">Are you bored, can't decide on an activity, or simply browsing around? <br>Get RANDOM feedback!</h2>
-                <input type="button" class="button random-advice" value="Click for RANDOM Advice">
-                <br>
-                <input type="button" class="button random-activity" value="Click for RANDOM Activities">
-                <br>
-                <input type="button" class="button random-dog" value="Click for RANDOM Dog Pics">
-                <br>
-                <input type="button" class="button random-cat" value="Click for RANDOM Cat Pics">
-            </fieldset>
-        </form>
+      <form id="js-form">
+        <fieldset name="random-categories">
+          <h2 class="statement">
+            Are you bored, can't decide on an activity, or simply browsing
+            around? <br />Get RANDOM feedback!
+          </h2>
+          <input
+            type="button"
+            class="button random-advice"
+            value="Click for RANDOM Advice"
+          />
+          <br />
+          <input
+            type="button"
+            class="button random-activity"
+            value="Click for RANDOM Activities"
+          />
+          <br />
+          <input
+            type="button"
+            class="button random-dog"
+            value="Click for RANDOM Dog Pics"
+          />
+          <br />
+          <input
+            type="button"
+            class="button random-cat"
+            value="Click for RANDOM Cat Pics"
+          />
+        </fieldset>
+      </form>
 
-        <p id="js-error-message"></p>
-        <section>
-            <div id="results-list" class="hidden"></div>
-            <input id="next-advice" class="button hidden" type="button" value="Next Advice">
-            <input id="next-activity" class="button hidden" type="button" value="Next Activity">
-            <input id="next-cat" class="button hidden" type="button" value="Next Cat Pic">
-            <input id="next-dog" class="button hidden" type="button" value="Next Dog Pic">
-            <input id="previous" type="button" class="button hidden" value="Main Menu">
-        </section>
+      <p id="js-error-message"></p>
+      <section>
+        <div id="results-list" class="hidden"></div>
+        <input
+          id="next-advice"
+          class="button hidden"
+          type="button"
+          value="Next Advice"
+        />
+        <input
+          id="next-activity"
+          class="button hidden"
+          type="button"
+          value="Next Activity"
+        />
+        <input
+          id="next-cat"
+          class="button hidden"
+          type="button"
+          value="Next Cat Pic"
+        />
+        <input
+          id="next-dog"
+          class="button hidden"
+          type="button"
+          value="Next Dog Pic"
+        />
+        <input
+          id="previous"
+          type="button"
+          class="button hidden"
+          value="Main Menu"
+        />
+      </section>
     </div>
     <footer role="contentinfo" id="copyright"></footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="index.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>
